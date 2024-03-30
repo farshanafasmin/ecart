@@ -1,0 +1,30 @@
+.fa-heart{
+    color: red;
+
+}
+
+.fa-cart-shopping{
+    color: black;
+    
+}
+i{
+    font-size: 20px;
+}
+
+.navbar{
+    background-color: rgb(229, 220, 220);
+}
+
+.navbar-brand {
+    background-image: linear-gradient(to right, #ff0000, orange, #0000ff);
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-size: 25px;
+}
+
+span{
+    background-image: linear-gradient(to right, #ff0000, orange, #0000ff);
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-size: 20px;
+}

@@ -1,0 +1,29 @@
+.row{
+    background-color: antiquewhite;
+}
+h6{
+    color: gray;
+}
+
+
+
+
+  
+
+  .pimg{
+    width: 280px;
+    height: 280px;
+  }
+
+  .card-container {
+    overflow-x: auto; 
+  }
+  
+  .card {
+    flex: 0 0 auto; 
+    margin-right: 10px; 
+  }
+
+  .d-block{
+    border-radius: 10px;
+  }

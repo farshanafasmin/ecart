@@ -1,0 +1,38 @@
+<div class="row ms-1 me-1">
+    <a href="" class="ms-5 mt-5" style="text-decoration: none;">Back To Home<i class="fa-solid fa-arrow-up-from-bracket fa-rotate-270 ms-1"></i></a>
+    <div class="col-lg-3"></div>
+
+    <div class="col-lg-6">
+        
+    <form [formGroup]="signupModel" class="mb-5 rounded">
+        <h2 class="text-center">Register</h2>
+        <img src="https://i.postimg.cc/HkWccw32/sign-removebg-preview.png" class="img-fluid " width="500px" alt="">
+
+        <div class="form-floating mb-3 ms-3 me-3">
+            <input formControlName="username" type="email" class="form-control" id="floatingInput" name="username" placeholder="name@example.com">
+            <label for="floatingInput">Username</label>
+          </div>
+          <div *ngIf="signupModel.get('username')?.errors && signupModel.get('username')?.touched">
+            <p class="text-danger text-center">*Please enter correct username</p>
+          </div>
+          <div class="form-floating mb-3 ms-3 me-3">
+            <input formControlName="email" type="email" class="form-control" name="email" id="floatingInput1" placeholder="name@example.com">
+            <label for="floatingInput">Email </label>
+          </div>
+          <div *ngIf="signupModel.get('email')?.errors && signupModel.get('email')?.touched">
+            <p class="text-danger text-center">*Please enter a valid email </p>
+          </div>
+        <div class="form-floating ms-3 me-3">
+            <input formControlName="password" type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div *ngIf="signupModel.get('password')?.errors && signupModel.get('password')?.touched">
+            <p class="text-danger text-center">*Password only contain letters and digits</p>
+          </div>
+        <div class="text-center mt-3 ms-3 me-3 "><button (click)="signup()" type="submit" class="btn btn-primary">Register</button></div>
+        <a  routerLink="/login"  class="mb-5 d-block text-center">Already registered?Click here to login</a>
+      </form>   
+    </div>
+
+    <div class="col-lg-3"></div>
+</div>

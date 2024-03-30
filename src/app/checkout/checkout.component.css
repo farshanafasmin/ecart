@@ -1,0 +1,15 @@
+form{
+    box-shadow: 2px 2px 5px grey;
+}
+
+.sub{
+    box-shadow: 2px 2px 5px grey;
+}
+
+h6{
+    color: gainsboro;
+}
+
+.del{
+    text-shadow: 2px 2px 4px rgba(21, 21, 21, 0.5);
+color: rgb(255, 72, 0);}

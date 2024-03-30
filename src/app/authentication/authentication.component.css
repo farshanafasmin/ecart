@@ -1,0 +1,11 @@
+a{
+    color: black;
+}
+
+form{
+    box-shadow: 2px 2px 5px gainsboro;
+}
+
+.row{
+    overflow-x: hidden;
+}

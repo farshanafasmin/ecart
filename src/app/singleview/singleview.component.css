@@ -1,0 +1,11 @@
+.card{
+    box-shadow: 2px 2px 5px gray;
+    max-width: 100%;
+}
+
+@media screen and (max-width:450px){
+    .card{
+        width: 900px;
+        margin: 5px;
+    }
+}

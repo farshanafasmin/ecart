@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<div *ngIf="products.length==0" class="row">
+    <div class="col-3"></div>
+
+    <div class="col-6 text-center">
+        <img src="https://i.postimg.cc/5NptHn8X/wish.avif" class="img-fluid" width="500" height="500" alt="">
+        <h3 class="text-center"><i>Your Cart is empty!</i></h3>
+        <button routerLink="/" class="btn2  mb-5">Add More Items</button>
+
+    </div>
+
+    <div class="col-3"></div>
+</div>
+
+<!-- -------cart list----------- -->
+<div *ngIf="products.length!=0" class="card mb-5 mt-5" >
+  <div class="row">
+      <div class="col-md-8 cart">
+          <div class="title">
+              <div class="row">
+                  <div class="col"><h4><b>Shopping Cart</b></h4></div>
+              </div>
+          </div>    
+          <div class="row border-top border-bottom" *ngFor="let i of products">
+              <div class="row main align-items-center">
+                  <div class="col-2"><img class="img2 img-fluid" [src]="i.image"></div>
+                  <div class="col">
+                      <div class="row ">{{i.title}}</div>
+                      <div class="row text-muted">{{i.category}}</div>
+                  </div>
+                  <div class="col d-flex">
+                      <a (click)="decrementCount(i._id)" ><i class="fa-solid fa-minus mt-2"></i></a>
+                      <input type="text" type="num" class="form-control text-center" id="inputQuantity" 
+                      [value]="i.quantity" style="max-width: 3rem;" readonly>
+                      <a (click)="incrementCount(i._id)"><i class="fa-solid fa-plus mt-2"></i></a>
+                  </div>
+                  <div class="col">${{i.price}}
+                    <button class="btn" (click)="removeCart(i._id)"><i class="fa-solid fa-trash " style="color: red;"></i></button>
+                  </div>
+              </div>
+          </div>
+         
+         
+          <div class="back-to-shop">
+           <a routerLink="/">Back to shop</a>
+        </div>
+      </div>
+      <div class="col-md-4 summary">
+          <div><h5><b>Summary</b></h5></div>
+          <hr>
+          
+          <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+              <div class="col">TOTAL PRICE</div>
+              <div class="col text-right">${{totalPrice}}</div>
+          </div>
+          <button (click)="checkOut()" class="btn2 btn">CHECKOUT</button>
+      </div>
+  </div>
+  
+</div>
