@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ProductService {
  
 
-  Baseurl="https://ecartserver-52kl.onrender.com "
+  Baseurl="https://ecartserver-52kl.onrender.com"
 
   // create behaviour subject
 
